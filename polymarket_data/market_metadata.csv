@@ -1,0 +1,78 @@
+market_id,condition_id,question,description,end_date,volume_24hr,liquidity,yes_token_id,no_token_id,tags,created_at
+1352590,0x598ec9f98def655a43fc5a62bf5edb4322cbe540cd8d2d1b0644f82ce669a944,Will FC Barcelona win on 2026-02-12?,"In the upcoming game, scheduled for February 12, 2026
+If FC Barcelona wins, this market will resolve to ""Yes"".
+Otherwise, this market will resolve to ""No"".
+If the game is postponed, this market will remain open until the game has been completed.
+If the game is canceled entirely, with no make-up game, this market will resolve ""No"".
+This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.",2026-02-12T20:00:00Z,9267959.454482885,3190394.21589,64925930190840374146128158219462155950584308042936551729644022500780993170724,110306683408446932642538821343421502760046123590644224637212978949871871846682,,2026-02-13T09:02:06.884541
+1303357,0x73acf1ef075d83bedb89e5c32e9083477adbde563cd0d76b78b56defdf2d6438,"Will Ethereum reach $4,400 in February?","This market will immediately resolve to ""Yes"" if any Binance 1 minute candle for ETH/USDT during the month specified in the title (from 00:00 AM ET on the first day to 11:59 PM ET on the last), has a final High price equal to or greater than the price specified in the title. Otherwise, this market will resolve to ""No.""
+
+The resolution source for this market is Binance, specifically the ETH/USDT High prices available at https://www.binance.com/en/trade/ETH_USDT, with the chart settings on ""1m"" for one-minute candles selected on the top bar.
+
+Please note that the outcome of this market depends solely on the price data from the Binance ETH/USDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",2026-03-01T05:00:00Z,2821470.5143419993,201532.60704,108999384188108521715304668689630764454260618208482429430624780380952570648070,248267515227980084974200788604003065853520856444892385895516545819840653679,,2026-02-13T09:02:06.884572
+1297449,0x017f7caf0f73e7b8fe56e1de3c1083945cf830c298e7d587b19fb3f1dab5c34b,Will Arsenal FC win on 2026-02-12?,"In the upcoming game, scheduled for February 12, 2026
+If Arsenal FC wins, this market will resolve to ""Yes"".
+Otherwise, this market will resolve to ""No"".
+If the game is postponed, this market will remain open until the game has been completed.
+If the game is canceled entirely, with no make-up game, this market will resolve ""No"".
+This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.",2026-02-12T20:00:00Z,2537454.032373001,1222562.27369,107683332630704778571811485336992949412595151924810273497552505022869283628038,40639449871278630568960216400358194927095899913604388755624160949269833979443,,2026-02-13T09:02:06.884598
+1345270,0x5ee8c736270c36d314a3db86983eca6da7de3f4e24a7dcddadfa9aa2c258ce38,Bucks vs. Thunder,"In the upcoming NBA game, scheduled for February 12 at 7:30PM ET:
+If the Bucks win, the market will resolve to ""Bucks"".
+If the Thunder win, the market will resolve to ""Thunder"".
+If the game is postponed, this market will remain open until the game has been completed.
+If the game is canceled entirely, with no make-up game, this market will resolve 50-50.
+The result will be determined based on the final score including any overtime periods.",2026-02-13T00:30:00Z,2521744.9591629906,52266.4995,115398480700108494801153059742450217770464747356385312544248721773516157633342,50959513038703524594980896174660538669616360861427459199428127395963380847703,,2026-02-13T09:02:06.884616
+1360606,0x7c39ac9cc39be478f9fc273f78ad5e61cef5869f5b87860cc3f439a9abfa2648,"US strikes Iran by February 12, 2026?","This market will resolve to ""Yes"" if the US initiates a drone, missile, or air strike on Iranian soil or any official Iranian embassy or consulate between the time of this market's creation and the listed date (ET). Otherwise, this market will resolve to ""No"".
+
+For the purposes of this market, a qualifying ""strike"" is defined as the use of aerial bombs, drones or missiles (including cruise or ballistic missiles) launched by US military forces that impact Iranian ground territory or any official Iranian embassy or consulate (e.g., if a weapons depot on Iranian soil is hit by an US missile, this market will resolve to ""Yes"").
+
+Missiles or drones which are intercepted and surface-to-air missile strikes will not be sufficient for a ""Yes"" resolution regardless of whether they land on Iranian territory or cause damage.
+
+Actions such as artillery fire, small arms fire, FPV or ATGM strikes directly, ground incursions, naval shelling, cyberattacks, or other operations conducted by US ground operatives will not qualify.
+
+The resolution source will be a consensus of credible reporting.",2026-01-31T00:00:00Z,2291442.3558790004,286025.88471,73677092824627469236004850450974585254752852081591495783862702897935961268469,13426327188410544600659940420628002519816853671560149479044459621691916276034,,2026-02-13T09:02:06.884633
+572473,0x46d40e851b24d9b0af4bc1942ccd86439cae82a9011767da14950df0ad997adf,Will Trump nominate Judy Shelton as the next Fed chair?,"This market will resolve according to the next individual Donald Trump, as President of the United States, formally nominates to be Chair of the Federal Reserve by December 31, 2026, 11:59 PM ET. 
+
+Formal nominations are defined as the submission of a nomination message to the U.S. Senate.
+
+Acting or interim appointments will not count unless the individual is formally nominated to be Chair of the Federal Reserve by submission of a nomination message to the U.S. Senate.
+
+The primary resolution source for this market will be official information from the U.S. Senate (see: https://www.senate.gov/legislative/nominations_new.htm), however a consensus of credible reporting may also be used.",2026-12-31T00:00:00Z,2129129.0666129994,1364867.91225,5031084282167950494806674428243037744881029417420880897305642929037077494331,20939351535690701474621316837957321939118947084394902825750156021315806001424,,2026-02-13T09:02:06.884661
+572469,0x61b66d02793b4a68ab0cc25be60d65f517fe18c7d654041281bb130341244fcc,Will Trump nominate Kevin Warsh as the next Fed chair?,"This market will resolve according to the next individual Donald Trump, as President of the United States, formally nominates to be Chair of the Federal Reserve by December 31, 2026, 11:59 PM ET. 
+
+Formal nominations are defined as the submission of a nomination message to the U.S. Senate.
+
+Acting or interim appointments will not count unless the individual is formally nominated to be Chair of the Federal Reserve by submission of a nomination message to the U.S. Senate.
+
+The primary resolution source for this market will be official information from the U.S. Senate (see: https://www.senate.gov/legislative/nominations_new.htm), however a consensus of credible reporting may also be used.",2026-12-31T00:00:00Z,675234.5181730011,380297.95134,51338236787729560681434534660841415073585974762690814047670810862722808070955,18289842382539867639079362738467334752951741961393928566628307174343542320349,,2026-02-13T09:02:06.884683
+654415,0x25aa90b3cd98305e849189b4e8b770fc77fe89bccb7cf9656468414e01145d38,Will the Fed increase interest rates by 25+ bps after the March 2026 meeting?,"The FED interest rates are defined in this market by the upper bound of the target federal funds range. The decisions on the target federal fund range are made by the Federal Open Market Committee (FOMC) meetings.
+
+This market will resolve to the amount of basis points the upper bound of the target federal funds rate is changed by versus the level it was prior to the Federal Reserve's March 2026 meeting.
+
+If the target federal funds rate is changed to a level not expressed in the displayed options, the change will be rounded up to the nearest 25 and will resolve to the relevant bracket. (e.g. if there's a cut/increase of 12.5 bps it will be considered to be 25 bps)
+
+The resolution source for this market is the FOMC’s statement after its meeting scheduled for March 17 - 18, 2026 according to the official calendar: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm.
+
+The level and change of the target federal funds rate is also published at the official website of the Federal Reserve at https://www.federalreserve.gov/monetarypolicy/openmarket.htm.
+
+This market may resolve as soon as the FOMC’s statement for their March meeting with relevant data is issued. If no statement is released by the end date of the next scheduled meeting, this market will resolve to the ""No change"" bracket.",2026-03-18T00:00:00Z,661139.5819469999,1641964.32744,54073086346734626735797775941991553522163760164405051969883391401961188364109,111080671036126109659854287535401661966194360665829017654832975124868412594547,,2026-02-13T09:02:06.884704
+561257,0xbbbece074c2d4010e39e39c85ed67b1131180fcea616073c893fb6beaf51d783,Will Michelle Obama win the 2028 US Presidential Election?,"The 2028 US Presidential Election is scheduled to take place on November 7, 2028.
+
+This market will resolve to the person who wins the 2028 US Presidential Election.
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2029) this market will resolve based on who is inaugurated.",2028-11-07T00:00:00Z,659112.105983,661129.3697,88521269813605705303364598280494261510300497312149869577251450871617962933121,1970496541508335019913900195809032484597886384784144327835472760880523550630,,2026-02-13T09:02:06.884742
+564163,0xb207031da5ef9cbded418e6b5b3c5eee24a3a7b22c6ec10053cbaaa67d793796,Will Luka Doncic win the 2025–2026 NBA MVP?,"This market will resolve to ""Yes"" if Luka Doncic is awarded the 2025–26 regular season NBA Most Valuable Player (MVP) Award. Otherwise, this market will resolve to ""No"".
+
+If the listed player is not announced as a finalist for the 2025–26 NBA MVP award, this market will immediately resolve to ""No"".
+
+The primary resolution source for this market will be official information from the NBA. However, a consensus of credible reporting may also be used.",2026-06-10T00:00:00Z,609292.2890000005,58791.39927,89110596788673536475065853727140488937259064164063660201050220270400840228269,101506943049053276934626391886226570064171431948041761918666910024462041911155,,2026-02-13T09:02:06.884763
+1303353,0x113263410d37b2256691b62d76b09a97d4ecd75bdcb0df37ff14a7adf53039bb,"Will Ethereum reach $5,000 in February?","This market will immediately resolve to ""Yes"" if any Binance 1 minute candle for ETH/USDT during the month specified in the title (from 00:00 AM ET on the first day to 11:59 PM ET on the last), has a final High price equal to or greater than the price specified in the title. Otherwise, this market will resolve to ""No.""
+
+The resolution source for this market is Binance, specifically the ETH/USDT High prices available at https://www.binance.com/en/trade/ETH_USDT, with the chart settings on ""1m"" for one-minute candles selected on the top bar.
+
+Please note that the outcome of this market depends solely on the price data from the Binance ETH/USDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",2026-03-01T05:00:00Z,317186.0829999999,550520.33302,8678660470472826014418184687935682042816231019568458767776122035544471785962,153401115097632822279490823536838463032128417280696556403937990612533553557,,2026-02-13T09:02:06.884783
+561982,0x00ad3bb5284b0b2314b1a2d42812fe292f606619c6278bd95c9d905816c240f6,Will Sarah Huckabee Sanders win the 2028 Republican presidential nomination?,"This market will resolve to “Yes” if the named individual wins and accepts the 2028 nomination of the Republican Party for U.S. president. Otherwise, this market will resolve to “No”.
+
+The resolution source for this market will be a consensus of official Republican Party sources.
+
+Any replacement of the Republican nominee before election day will not change the resolution of the market.",2028-11-07T00:00:00Z,314591.153126,701633.74689,35019878675696902444730611385908114488958639217305639231975258218416576501435,56675537260019219223601219755487607959534973218119249587935401577859164512735,,2026-02-13T09:02:06.884805
