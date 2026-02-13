@@ -13,10 +13,13 @@ from typing import Optional
 
 from getdata.config.settings import (
     collection_config,
-    runtime_config
+    runtime_config,
+    trade_config,
+    storage_config
 )
 from getdata.core.market_selector import MarketSelector, Market
 from getdata.core.data_collector import DataCollector
+from getdata.core.trade_collector import TradeCollector
 from getdata.core.storage import StorageManager
 from getdata.utils.logger import get_logger
 
@@ -34,7 +37,9 @@ class CollectionOrchestrator:
         # 初始化组件
         self.market_selector = MarketSelector()
         self.data_collector = DataCollector()
+        self.trade_collector = TradeCollector()
         self.storage_manager = StorageManager()
+        self.trade_cursors = self.storage_manager.load_trade_cursors()
         
         # 注册信号处理（优雅退出）
         signal.signal(signal.SIGINT, self._signal_handler)
@@ -139,6 +144,8 @@ class CollectionOrchestrator:
         self.logger.info("开始数据采集")
         self.logger.info(f"市场数: {len(markets)}")
         self.logger.info(f"采集间隔: {collection_config.INTERVAL_SECONDS} 秒")
+        if trade_config.ENABLED:
+            self.logger.info("逐笔成交采集: 已启用")
         if duration_hours:
             self.logger.info(f"计划运行时长: {duration_hours} 小时")
         else:
@@ -165,6 +172,23 @@ class CollectionOrchestrator:
                     )
                 else:
                     self.logger.warning("✗ 本轮采集失败")
+
+                # 采集逐笔成交（订单级）
+                if trade_config.ENABLED:
+                    try:
+                        trades, updated_cursors = self.trade_collector.collect_batch_with_cursors(
+                            markets=markets,
+                            cursors=self.trade_cursors
+                        )
+
+                        if trades:
+                            self.storage_manager.save_trades_batch(trades)
+                            self.logger.info(f"✓ 逐笔成交新增 {len(trades)} 条")
+
+                        self.trade_cursors = updated_cursors
+                        self.storage_manager.save_trade_cursors(self.trade_cursors)
+                    except Exception as e:
+                        self.logger.warning(f"逐笔成交采集异常（已跳过本轮，不影响快照）: {e}")
                 
                 # 检查运行时长
                 if duration_hours:
@@ -219,9 +243,10 @@ class CollectionOrchestrator:
         self.storage_manager.print_stats()
         
         self.logger.info("\n数据文件位置:")
-        self.logger.info(f"  元数据: {self.storage_manager.storage_config.METADATA_FILE}")
-        self.logger.info(f"  时序数据: {self.storage_manager.storage_config.TIMESERIES_DIR}")
-        self.logger.info(f"  日志: {self.storage_manager.storage_config.LOG_FILE}")
+        self.logger.info(f"  元数据: {storage_config.METADATA_FILE}")
+        self.logger.info(f"  时序数据: {storage_config.TIMESERIES_DIR}")
+        self.logger.info(f"  逐笔成交: {storage_config.TRADES_DIR}")
+        self.logger.info(f"  日志: {storage_config.LOG_FILE}")
     
     def run(self, duration_hours: Optional[int] = None):
         """

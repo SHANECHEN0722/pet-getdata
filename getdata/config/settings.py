@@ -36,6 +36,31 @@ class CollectionConfig:
     # 订单簿深度档位数
     ORDERBOOK_TOP_N: int = 5
 
+# ==================== 逐笔成交采集配置 ====================
+class TradeCollectionConfig:
+    """逐笔成交（订单级）采集配置"""
+
+    # 是否启用逐笔成交采集
+    ENABLED: bool = True
+
+    # 每次请求的成交数量上限
+    PAGE_LIMIT: int = 200
+
+    # 追平模式：每轮持续翻页直到没有新数据
+    CATCH_UP_UNTIL_EXHAUSTED: bool = True
+
+    # 单轮翻页安全上限（防止异常接口导致死循环）
+    MAX_PAGES_PER_MARKET: int = 200
+
+    # 交易请求超时（秒）
+    REQUEST_TIMEOUT: int = 3000
+
+    # 候选交易接口（按顺序尝试）
+    TRADE_ENDPOINTS: List[str] = [
+        f"{CLOB_API}/trades",
+        f"{DATA_API}/trades"
+    ]
+
 # ==================== 市场选择配置 ====================
 class MarketSelectionConfig:
     """市场分层采样配置"""
@@ -80,6 +105,12 @@ class StorageConfig:
     
     # 日志目录
     LOG_DIR: Path = DATA_DIR / "logs"
+
+    # 逐笔成交目录
+    TRADES_DIR: Path = DATA_DIR / "trades"
+
+    # 逐笔成交断点游标
+    TRADE_CURSOR_FILE: Path = DATA_DIR / "trade_cursors.json"
     
     # 日志文件
     LOG_FILE: Path = LOG_DIR / "collection.log"
@@ -95,6 +126,11 @@ class StorageConfig:
     def get_timeseries_filename(market_id: str, outcome: str = "YES") -> Path:
         """生成时序数据文件名"""
         return StorageConfig.TIMESERIES_DIR / f"{market_id}_{outcome}.csv"
+
+    @staticmethod
+    def get_trades_filename(market_id: str, outcome: str = "YES") -> Path:
+        """生成逐笔成交文件名"""
+        return StorageConfig.TRADES_DIR / f"{market_id}_{outcome}.csv"
 
 # ==================== 日志配置 ====================
 class LogConfig:
@@ -168,8 +204,24 @@ class DataFieldsConfig:
         'ask_depth_top5'
     ]
 
+    # 逐笔成交字段
+    TRADE_FIELDS: List[str] = [
+        'timestamp',
+        'datetime',
+        'trade_id',
+        'market_id',
+        'token_id',
+        'side',
+        'price',
+        'size',
+        'amount',
+        'tx_hash',
+        'raw'
+    ]
+
 # ==================== 实例化配置 ====================
 collection_config = CollectionConfig()
+trade_config = TradeCollectionConfig()
 market_config = MarketSelectionConfig()
 storage_config = StorageConfig()
 log_config = LogConfig()
@@ -182,6 +234,7 @@ def init_directories():
     storage_config.DATA_DIR.mkdir(parents=True, exist_ok=True)
     storage_config.TIMESERIES_DIR.mkdir(parents=True, exist_ok=True)
     storage_config.LOG_DIR.mkdir(parents=True, exist_ok=True)
+    storage_config.TRADES_DIR.mkdir(parents=True, exist_ok=True)
 
 # 自动初始化
 init_directories()
