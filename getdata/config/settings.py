@@ -53,7 +53,7 @@ class TradeCollectionConfig:
     MAX_PAGES_PER_MARKET: int = 200
 
     # 交易请求超时（秒）
-    REQUEST_TIMEOUT: int = 3000
+    REQUEST_TIMEOUT: int = 300
 
     # 候选交易接口（按顺序尝试）
     TRADE_ENDPOINTS: List[str] = [
