@@ -3,6 +3,7 @@
 参考：Polymarket 官方 SDK 与社区最佳实践
 """
 
+import os
 from pathlib import Path
 from typing import List
 
@@ -16,7 +17,7 @@ class CollectionConfig:
     """数据采集配置"""
     
     # 采集间隔（秒）
-    INTERVAL_SECONDS: int = 60  # 1 分钟
+    INTERVAL_SECONDS: int = 180  # 3 分钟
     
     # 请求超时（秒）- 增加到 30 秒以应对大量数据请求
     REQUEST_TIMEOUT: int = 300
@@ -50,10 +51,28 @@ class TradeCollectionConfig:
     CATCH_UP_UNTIL_EXHAUSTED: bool = True
 
     # 单轮翻页安全上限（防止异常接口导致死循环）
-    MAX_PAGES_PER_MARKET: int = 200
+    # 说明：首次历史回溯会按该上限分轮推进（支持断点续传），避免单轮耗时过长
+    MAX_PAGES_PER_MARKET: int = 20
 
     # 交易请求超时（秒）
     REQUEST_TIMEOUT: int = 300
+
+    # 检测到 L2 凭证时，自动启用 CLOB 全量历史模式
+    USE_L2_HISTORY_IF_AVAILABLE: bool = False
+
+    # 仅提供私钥时，是否自动 create_or_derive_api_creds
+    L2_AUTO_DERIVE_CREDS: bool = True
+
+    # L2 请求重试配置
+    L2_MAX_RETRIES: int = 3
+    L2_RETRY_DELAY: float = 2.0
+
+    # L2 鉴权配置（建议通过环境变量注入）
+    L2_CHAIN_ID: int = int(os.getenv("POLY_L2_CHAIN_ID", "137"))
+    L2_PRIVATE_KEY: str = os.getenv("POLY_L2_PRIVATE_KEY", "")
+    L2_API_KEY: str = os.getenv("POLY_L2_API_KEY", "")
+    L2_API_SECRET: str = os.getenv("POLY_L2_API_SECRET", "")
+    L2_API_PASSPHRASE: str = os.getenv("POLY_L2_API_PASSPHRASE", "")
 
     # 候选交易接口（按顺序尝试）
     TRADE_ENDPOINTS: List[str] = [
@@ -66,13 +85,13 @@ class MarketSelectionConfig:
     """市场分层采样配置"""
     
     # 高流动性市场数量（volume_24hr 前 20%）
-    HIGH_LIQUIDITY_COUNT: int = 6
+    HIGH_LIQUIDITY_COUNT: int = 3
     
     # 中等流动性市场数量（30%-50%）
-    MID_LIQUIDITY_COUNT: int = 4
+    MID_LIQUIDITY_COUNT: int = 2
     
     # 低流动性市场数量（80% 后）
-    LOW_LIQUIDITY_COUNT: int = 2
+    LOW_LIQUIDITY_COUNT: int = 1
     
     # 总市场数量
     @property

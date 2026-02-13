@@ -146,6 +146,29 @@ class CollectionOrchestrator:
         self.logger.info(f"采集间隔: {collection_config.INTERVAL_SECONDS} 秒")
         if trade_config.ENABLED:
             self.logger.info("逐笔成交采集: 已启用")
+            if trade_config.USE_L2_HISTORY_IF_AVAILABLE:
+                missing_l2 = []
+                if not (trade_config.L2_PRIVATE_KEY or "").strip():
+                    missing_l2.append("POLY_L2_PRIVATE_KEY")
+                if not (trade_config.L2_API_KEY or "").strip():
+                    missing_l2.append("POLY_L2_API_KEY")
+                if not (trade_config.L2_API_SECRET or "").strip():
+                    missing_l2.append("POLY_L2_API_SECRET")
+                if not (trade_config.L2_API_PASSPHRASE or "").strip():
+                    missing_l2.append("POLY_L2_API_PASSPHRASE")
+
+                if missing_l2 and not trade_config.L2_AUTO_DERIVE_CREDS:
+                    self.logger.info(
+                        "逐笔模式: L2 自动全量未就绪（缺少: "
+                        + ", ".join(missing_l2)
+                        + "），将使用公开接口"
+                    )
+                elif missing_l2 and trade_config.L2_AUTO_DERIVE_CREDS:
+                    self.logger.info(
+                        "逐笔模式: 将尝试私钥自动 derive L2 凭证（若失败则回退公开接口）"
+                    )
+                else:
+                    self.logger.info("逐笔模式: 检测到完整 L2 凭证，优先使用 CLOB 全量历史")
         if duration_hours:
             self.logger.info(f"计划运行时长: {duration_hours} 小时")
         else:
@@ -176,14 +199,26 @@ class CollectionOrchestrator:
                 # 采集逐笔成交（订单级）
                 if trade_config.ENABLED:
                     try:
-                        trades, updated_cursors = self.trade_collector.collect_batch_with_cursors(
+                        self.logger.info("开始逐笔成交采集...")
+                        yes_trades, updated_cursors = self.trade_collector.collect_batch_with_cursors(
                             markets=markets,
-                            cursors=self.trade_cursors
+                            cursors=self.trade_cursors,
+                            outcome="YES"
+                        )
+                        no_trades, updated_cursors = self.trade_collector.collect_batch_with_cursors(
+                            markets=markets,
+                            cursors=updated_cursors,
+                            outcome="NO"
                         )
 
-                        if trades:
-                            self.storage_manager.save_trades_batch(trades)
-                            self.logger.info(f"✓ 逐笔成交新增 {len(trades)} 条")
+                        inserted_yes = self.storage_manager.save_trades_batch(yes_trades, outcome="YES")
+                        inserted_no = self.storage_manager.save_trades_batch(no_trades, outcome="NO")
+                        self.logger.info(
+                            f"✓ 逐笔成交 YES 抓取 {len(yes_trades)} 条，实际新增 {inserted_yes} 条"
+                        )
+                        self.logger.info(
+                            f"✓ 逐笔成交 NO 抓取 {len(no_trades)} 条，实际新增 {inserted_no} 条"
+                        )
 
                         self.trade_cursors = updated_cursors
                         self.storage_manager.save_trade_cursors(self.trade_cursors)

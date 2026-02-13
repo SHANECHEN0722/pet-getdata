@@ -6,6 +6,15 @@ echo "Polymarket 数据采集工具"
 echo "=========================================="
 echo ""
 
+# 加载本地环境变量（私钥/API 凭证）
+if [ -f .env.local ]; then
+    # shellcheck disable=SC1091
+    source .env.local
+    echo "✓ 已加载 .env.local"
+else
+    echo "ℹ 未找到 .env.local，将使用系统环境变量"
+fi
+
 # 检查依赖
 echo "检查依赖..."
 if ! python3 -c "import py_clob_client" 2>/dev/null; then

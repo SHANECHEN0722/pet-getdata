@@ -1,0 +1,93 @@
+market_id,condition_id,question,description,end_date,volume_24hr,liquidity,yes_token_id,no_token_id,tags,created_at
+1308327,0x4b78de44ea49d0eb8d5fee85352294b6f679a47c56944c6ad5c945e9a2ba7211,Government shutdown on Saturday?,"This market will resolve to “Yes” if the U.S. Office of Personnel Management (OPM) announces a new federal government shutdown due to a lapse in appropriations by February 14, 2026, 11:59 PM ET. Otherwise, this market will resolve to ""No"".
+
+A continuation, without any reopening, of the partial government shutdown which began on January 31, 2026, will not qualify.
+
+Partial shutdowns count as shutdowns; announcements of office closures due to holidays or inclement weather do not qualify as a shutdown.
+
+The resolution source for this market will be OPM’s Operating Status page (https://www.opm.gov/policy-data-oversight/snow-dismissal-procedures/current-status/).",2026-02-14T00:00:00Z,5932125.001122994,107618.35961,7648925155044397287047798308912067661131447591491670430094875295487039626662,43946269812975261940442841140057396362355013850035195910637438338242851933505,,2026-02-14T01:55:42.885373
+572473,0x46d40e851b24d9b0af4bc1942ccd86439cae82a9011767da14950df0ad997adf,Will Trump nominate Judy Shelton as the next Fed chair?,"This market will resolve according to the next individual Donald Trump, as President of the United States, formally nominates to be Chair of the Federal Reserve by December 31, 2026, 11:59 PM ET. 
+
+Formal nominations are defined as the submission of a nomination message to the U.S. Senate.
+
+Acting or interim appointments will not count unless the individual is formally nominated to be Chair of the Federal Reserve by submission of a nomination message to the U.S. Senate.
+
+The primary resolution source for this market will be official information from the U.S. Senate (see: https://www.senate.gov/legislative/nominations_new.htm), however a consensus of credible reporting may also be used.",2026-12-31T00:00:00Z,2882914.2853590045,3446330.59332,5031084282167950494806674428243037744881029417420880897305642929037077494331,20939351535690701474621316837957321939118947084394902825750156021315806001424,,2026-02-14T01:55:42.885423
+1303357,0x73acf1ef075d83bedb89e5c32e9083477adbde563cd0d76b78b56defdf2d6438,"Will Ethereum reach $4,400 in February?","This market will immediately resolve to ""Yes"" if any Binance 1 minute candle for ETH/USDT during the month specified in the title (from 00:00 AM ET on the first day to 11:59 PM ET on the last), has a final High price equal to or greater than the price specified in the title. Otherwise, this market will resolve to ""No.""
+
+The resolution source for this market is Binance, specifically the ETH/USDT High prices available at https://www.binance.com/en/trade/ETH_USDT, with the chart settings on ""1m"" for one-minute candles selected on the top bar.
+
+Please note that the outcome of this market depends solely on the price data from the Binance ETH/USDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",2026-03-01T05:00:00Z,2783980.2347700004,243488.95603,108999384188108521715304668689630764454260618208482429430624780380952570648070,248267515227980084974200788604003065853520856444892385895516545819840653679,,2026-02-14T01:55:42.885454
+1273610,0xb02e8bc0b915c7d6fc79363f84ca301edeb3c5cd7a7c30cf9517cb4a49a96e35,"US strikes Iran by February 13, 2026?","This market will resolve to ""Yes"" if the US initiates a drone, missile, or air strike on Iranian soil or any official Iranian embassy or consulate between the time of this market's creation and the listed date (ET). Otherwise, this market will resolve to ""No"".
+
+For the purposes of this market, a qualifying ""strike"" is defined as the use of aerial bombs, drones or missiles (including cruise or ballistic missiles) launched by US military forces that impact Iranian ground territory or any official Iranian embassy or consulate (e.g., if a weapons depot on Iranian soil is hit by an US missile, this market will resolve to ""Yes"").
+
+Missiles or drones which are intercepted and surface-to-air missile strikes will not be sufficient for a ""Yes"" resolution regardless of whether they land on Iranian territory or cause damage.
+
+Actions such as artillery fire, small arms fire, FPV or ATGM strikes directly, ground incursions, naval shelling, cyberattacks, or other operations conducted by US ground operatives will not qualify.
+
+The resolution source will be a consensus of credible reporting.",2026-01-31T00:00:00Z,1828393.0789250003,320811.2785,113967255285729983096369270222893793194300185054195401492031449617986822928022,82502710596437163348308378521149082521990735368840065096352406278737871407553,,2026-02-14T01:55:42.885483
+654412,0xdeb615a52cd114e5aa27d8344ae506a72bea81f6ed13f5915f050b615a193c20,Will the Fed decrease interest rates by 50+ bps after the March 2026 meeting?,"The FED interest rates are defined in this market by the upper bound of the target federal funds range. The decisions on the target federal fund range are made by the Federal Open Market Committee (FOMC) meetings.
+
+This market will resolve to the amount of basis points the upper bound of the target federal funds rate is changed by versus the level it was prior to the Federal Reserve's March 2026 meeting.
+
+If the target federal funds rate is changed to a level not expressed in the displayed options, the change will be rounded up to the nearest 25 and will resolve to the relevant bracket. (e.g. if there's a cut/increase of 12.5 bps it will be considered to be 25 bps)
+
+The resolution source for this market is the FOMC’s statement after its meeting scheduled for March 17 - 18, 2026 according to the official calendar: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm.
+
+The level and change of the target federal funds rate is also published at the official website of the Federal Reserve at https://www.federalreserve.gov/monetarypolicy/openmarket.htm.
+
+This market may resolve as soon as the FOMC’s statement for their March meeting with relevant data is issued. If no statement is released by the end date of the next scheduled meeting, this market will resolve to the ""No change"" bracket.",2026-03-18T00:00:00Z,1723031.964699999,1338968.53483,46553455570564517989191023458705371521436514261892866503067981558938998232024,48458075019957098166340475646923389496510427632693703161736892736757168972646,,2026-02-14T01:55:42.885520
+654414,0x257b18205f908aef01ef2d1d50e6fea7d29cf5486fe04031d8b101394476faed,Will there be no change in Fed interest rates after the March 2026 meeting?,"The FED interest rates are defined in this market by the upper bound of the target federal funds range. The decisions on the target federal fund range are made by the Federal Open Market Committee (FOMC) meetings.
+
+This market will resolve to the amount of basis points the upper bound of the target federal funds rate is changed by versus the level it was prior to the Federal Reserve's March 2026 meeting.
+
+If the target federal funds rate is changed to a level not expressed in the displayed options, the change will be rounded up to the nearest 25 and will resolve to the relevant bracket. (e.g. if there's a cut/increase of 12.5 bps it will be considered to be 25 bps)
+
+The resolution source for this market is the FOMC’s statement after its meeting scheduled for March 17 - 18, 2026 according to the official calendar: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm.
+
+The level and change of the target federal funds rate is also published at the official website of the Federal Reserve at https://www.federalreserve.gov/monetarypolicy/openmarket.htm.
+
+This market may resolve as soon as the FOMC’s statement for their March meeting with relevant data is issued. If no statement is released by the end date of the next scheduled meeting, this market will resolve to the ""No change"" bracket.",2026-03-18T00:00:00Z,1624556.238506002,1021119.1086,102559817034631022221500208641784929295731053857601013029449249654006364919935,114350083305515876605975857295292847572608542141507135338338719165921048222327,,2026-02-14T01:55:42.885564
+572469,0x61b66d02793b4a68ab0cc25be60d65f517fe18c7d654041281bb130341244fcc,Will Trump nominate Kevin Warsh as the next Fed chair?,"This market will resolve according to the next individual Donald Trump, as President of the United States, formally nominates to be Chair of the Federal Reserve by December 31, 2026, 11:59 PM ET. 
+
+Formal nominations are defined as the submission of a nomination message to the U.S. Senate.
+
+Acting or interim appointments will not count unless the individual is formally nominated to be Chair of the Federal Reserve by submission of a nomination message to the U.S. Senate.
+
+The primary resolution source for this market will be official information from the U.S. Senate (see: https://www.senate.gov/legislative/nominations_new.htm), however a consensus of credible reporting may also be used.",2026-12-31T00:00:00Z,597504.0715390008,583746.31712,51338236787729560681434534660841415073585974762690814047670810862722808070955,18289842382539867639079362738467334752951741961393928566628307174343542320349,,2026-02-14T01:55:42.885728
+1345822,0x091a562f6b4b504a03c3ef40e578ae3b0ca52c9512a65e51885760d74c904e78,"Will the price of Bitcoin be above $70,000 on February 13?","This market will resolve to ""Yes"" if the Binance 1 minute candle for BTC/USDT 12:00 in the ET timezone (noon) on the date specified in the title has a final ""Close"" price higher than the price specified in the title. Otherwise, this market will resolve to ""No"".
+
+The resolution source for this market is Binance, specifically the BTC/USDT ""Close"" prices currently available at https://www.binance.com/en/trade/BTC_USDT with ""1m"" and ""Candles"" selected on the top bar.
+
+Please note that this market is about the price according to Binance BTC/USDT, not according to other sources or spot markets.
+
+Price precision is determined by the number of decimal places in the source.",2026-02-13T17:00:00Z,595890.051822999,575493.59703,7514338355482411107885297642147346700682602688822253701101006408397180395381,108853481568553649253715212514076495978343067195498290598399317284340774311096,,2026-02-14T01:55:42.885759
+1324216,0xf44be44443ce01401fd5f2f90fe8564d22ac66c513d059ad6e1d204cbcf1246b,"Will Elon Musk post 420-439 tweets from February 6 to February 13, 2026?","This market will resolve according to the number of times Elon Musk (@elonmusk), posts on X from February 6 12:00 PM ET to February 13, 2026 12:00 PM ET.
+
+For the purposes of this market, only main feed posts, quote posts and reposts will count.
+
+Replies will NOT count towards the total - however, replies on the main feed such as https://x.com/elonmusk/status/1786073478711353576 will be counted by the tracker.
+
+Deleted posts will count as long as they remain available long enough to be captured by the tracker (~5 minutes).
+
+Community reposts which are not counted by the tracker not count toward the total.
+
+The resolution source for this market is the 'Post Counter' figure for posts found at https://xtracker.polymarket.com. Individual posts can be viewed by clicking ""Export Data"". If the tracker does not update correctly in accordance with the rules, X itself may be used as a secondary resolution source.",2026-02-13T17:00:00Z,580752.6245679997,167715.87758,2792886847269024576048196985164686432756537110722322312238549880745552363684,26931935981849487432974092272149465194193124280855613375789384756197153004430,,2026-02-14T01:55:42.885786
+561251,0x836b850fc838195374862551a36f1c8691d96ff01e58b0a071f0fc1a0e357fb1,Will LeBron James win the 2028 US Presidential Election?,"The 2028 US Presidential Election is scheduled to take place on November 7, 2028.
+
+This market will resolve to the person who wins the 2028 US Presidential Election.
+
+The resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven’t called the race for the same candidate by the inauguration date (January 20, 2029) this market will resolve based on who is inaugurated.",2028-11-07T00:00:00Z,579207.7601269998,1290835.31066,39223330966352513418907732239455948906399882924787587183466504819170775983376,50862799703982327636174441241062907649998751737045006653560124656563256528691,,2026-02-14T01:55:42.885817
+1345814,0x8d1fce5655ae29eac34e619e3ccbcb72232617acdc320b3009b37a74b5ab2e58,"Will the price of Bitcoin be above $64,000 on February 13?","This market will resolve to ""Yes"" if the Binance 1 minute candle for BTC/USDT 12:00 in the ET timezone (noon) on the date specified in the title has a final ""Close"" price higher than the price specified in the title. Otherwise, this market will resolve to ""No"".
+
+The resolution source for this market is Binance, specifically the BTC/USDT ""Close"" prices currently available at https://www.binance.com/en/trade/BTC_USDT with ""1m"" and ""Candles"" selected on the top bar.
+
+Please note that this market is about the price according to Binance BTC/USDT, not according to other sources or spot markets.
+
+Price precision is determined by the number of decimal places in the source.",2026-02-13T17:00:00Z,303978.08674699994,355107.22324,47680289545801809322028600483794205587034769109260194448038539698736513824425,77151626993680918419855904035848013024938870716472296383265106570363930033910,,2026-02-14T01:55:42.885847
+1364734,0x0262adc0b35c27c7b5d00211833a131066bf9c75a07be1b5b6eefe13c089b91a,"Bitcoin Up or Down - February 13, 12AM ET","This market will resolve to ""Up"" if the close price is greater than or equal to the open price for the BTC/USDT 1 hour candle that begins on the time and date specified in the title. Otherwise, this market will resolve to ""Down"".
+
+The resolution source for this market is information from Binance, specifically the BTC/USDT pair (https://www.binance.com/en/trade/BTC_USDT). The close « C » and open « O » displayed at the top of the graph for the relevant ""1H"" candle will be used once the data for that candle is finalized.
+
+Please note that this market is about the price according to Binance BTC/USDT, not according to other sources or spot markets.",2026-02-13T06:00:00Z,294619.584334,261238.06857,89290438394740532293560478854402078063195600438705211688163656469509288778360,104169515771468186088567229604428502469226041713036570825624378034774955754297,,2026-02-14T01:55:42.885873

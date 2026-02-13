@@ -156,10 +156,10 @@ class StorageManager:
 
         return existing
 
-    def save_trades_batch(self, trades: List[TradeRecord], outcome: str = "YES"):
+    def save_trades_batch(self, trades: List[TradeRecord], outcome: str = "YES") -> int:
         """按市场分组保存逐笔成交"""
         if not trades:
-            return
+            return 0
 
         grouped: Dict[str, List[TradeRecord]] = {}
         for trade in trades:
@@ -200,6 +200,8 @@ class StorageManager:
 
         if total_new:
             self.logger.debug(f"✓ 已保存 {total_new} 条逐笔成交")
+
+        return total_new
 
     def load_trade_cursors(self) -> Dict[str, str]:
         """加载逐笔成交游标"""

@@ -1,0 +1,282 @@
+2026-02-14 01:55:37 [[32mINFO[0m] DataCollector: ✓ CLOB 客户端初始化完成
+2026-02-14 01:55:37 [[32mINFO[0m] TradeCollector: ℹ 已禁用 L2 历史模式，逐笔成交使用公开接口模式
+2026-02-14 01:55:37 [[32mINFO[0m] CollectionOrchestrator: ======================================================================
+2026-02-14 01:55:37 [[32mINFO[0m] CollectionOrchestrator: Polymarket 数据采集工具
+2026-02-14 01:55:37 [[32mINFO[0m] CollectionOrchestrator: 用途：异常赔率运动检测 - 时序数据采集
+2026-02-14 01:55:37 [[32mINFO[0m] CollectionOrchestrator: ======================================================================
+2026-02-14 01:55:37 [[32mINFO[0m] CollectionOrchestrator: 验证 API 连接...
+2026-02-14 01:55:37 [[32mINFO[0m] MarketSelector: 正在从 API 获取市场列表（limit=1, order=volume24hr）... [尝试 1/3]
+2026-02-14 01:55:38 [[32mINFO[0m] MarketSelector: ✓ API 返回 1 个市场
+2026-02-14 01:55:38 [[32mINFO[0m] MarketSelector: ✓ 成功解析 1 个市场
+2026-02-14 01:55:38 [[32mINFO[0m] CollectionOrchestrator: ✓ API 连接正常
+2026-02-14 01:55:38 [[32mINFO[0m] MarketSelector: ============================================================
+2026-02-14 01:55:38 [[32mINFO[0m] MarketSelector: 开始市场选择流程
+2026-02-14 01:55:38 [[32mINFO[0m] MarketSelector: ============================================================
+2026-02-14 01:55:38 [[32mINFO[0m] MarketSelector: 正在从 API 获取市场列表（limit=100, order=volume24hr）... [尝试 1/3]
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: ✓ API 返回 100 个市场
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: ✓ 成功解析 100 个市场
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: 过滤后保留 100/100 个市场 (min_liq=$100.0, min_vol=$0.0)
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: ✓ 分层采样完成：
+  - 高流动性: 6 个
+  - 中等流动性: 4 个
+  - 低流动性: 2 个
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: 
+选中的市场详情：
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [1] 高流动性 | Government shutdown on Saturday?...
+    Volume: $5,932,125 | Liquidity: $107,618 | ID: 1308327...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [2] 高流动性 | Will Trump nominate Judy Shelton as the next Fed chair?...
+    Volume: $2,882,914 | Liquidity: $3,446,331 | ID: 572473...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [3] 高流动性 | Will Ethereum reach $4,400 in February?...
+    Volume: $2,783,980 | Liquidity: $243,489 | ID: 1303357...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [4] 高流动性 | US strikes Iran by February 13, 2026?...
+    Volume: $1,828,393 | Liquidity: $320,811 | ID: 1273610...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [5] 高流动性 | Will the Fed decrease interest rates by 50+ bps after the Ma...
+    Volume: $1,723,032 | Liquidity: $1,338,969 | ID: 654412...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [6] 高流动性 | Will there be no change in Fed interest rates after the Marc...
+    Volume: $1,624,556 | Liquidity: $1,021,119 | ID: 654414...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [7] 中等流动性 | Will Trump nominate Kevin Warsh as the next Fed chair?...
+    Volume: $597,504 | Liquidity: $583,746 | ID: 572469...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [8] 中等流动性 | Will the price of Bitcoin be above $70,000 on February 13?...
+    Volume: $595,890 | Liquidity: $575,494 | ID: 1345822...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [9] 中等流动性 | Will Elon Musk post 420-439 tweets from February 6 to Februa...
+    Volume: $580,753 | Liquidity: $167,716 | ID: 1324216...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [10] 中等流动性 | Will LeBron James win the 2028 US Presidential Election?...
+    Volume: $579,208 | Liquidity: $1,290,835 | ID: 561251...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [11] 低流动性 | Will the price of Bitcoin be above $64,000 on February 13?...
+    Volume: $303,978 | Liquidity: $355,107 | ID: 1345814...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: [12] 低流动性 | Bitcoin Up or Down - February 13, 12AM ET...
+    Volume: $294,620 | Liquidity: $261,238 | ID: 1364734...
+2026-02-14 01:55:39 [[32mINFO[0m] MarketSelector: ============================================================
+2026-02-14 01:55:39 [[32mINFO[0m] CollectionOrchestrator: 
+验证 12 个市场的订单簿可用性...
+2026-02-14 01:55:39 [[32mINFO[0m] CollectionOrchestrator:   [1/12] 验证: Government shutdown on Saturday?...
+2026-02-14 01:55:39 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:39 [[32mINFO[0m] CollectionOrchestrator:   [2/12] 验证: Will Trump nominate Judy Shelton as the next Fed c...
+2026-02-14 01:55:40 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:40 [[32mINFO[0m] CollectionOrchestrator:   [3/12] 验证: Will Ethereum reach $4,400 in February?...
+2026-02-14 01:55:40 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:40 [[32mINFO[0m] CollectionOrchestrator:   [4/12] 验证: US strikes Iran by February 13, 2026?...
+2026-02-14 01:55:40 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:40 [[32mINFO[0m] CollectionOrchestrator:   [5/12] 验证: Will the Fed decrease interest rates by 50+ bps af...
+2026-02-14 01:55:40 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:40 [[32mINFO[0m] CollectionOrchestrator:   [6/12] 验证: Will there be no change in Fed interest rates afte...
+2026-02-14 01:55:41 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:41 [[32mINFO[0m] CollectionOrchestrator:   [7/12] 验证: Will Trump nominate Kevin Warsh as the next Fed ch...
+2026-02-14 01:55:41 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:41 [[32mINFO[0m] CollectionOrchestrator:   [8/12] 验证: Will the price of Bitcoin be above $70,000 on Febr...
+2026-02-14 01:55:41 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:41 [[32mINFO[0m] CollectionOrchestrator:   [9/12] 验证: Will Elon Musk post 420-439 tweets from February 6...
+2026-02-14 01:55:41 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:41 [[32mINFO[0m] CollectionOrchestrator:   [10/12] 验证: Will LeBron James win the 2028 US Presidential Ele...
+2026-02-14 01:55:42 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:42 [[32mINFO[0m] CollectionOrchestrator:   [11/12] 验证: Will the price of Bitcoin be above $64,000 on Febr...
+2026-02-14 01:55:42 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:42 [[32mINFO[0m] CollectionOrchestrator:   [12/12] 验证: Bitcoin Up or Down - February 13, 12AM ET...
+2026-02-14 01:55:42 [[32mINFO[0m] CollectionOrchestrator:     ✓ 有效
+2026-02-14 01:55:42 [[32mINFO[0m] CollectionOrchestrator: 
+✓ 12/12 个市场验证通过，将开始采集
+2026-02-14 01:55:42 [[32mINFO[0m] StorageManager: ✓ 元数据已保存: polymarket_data/market_metadata.csv (12 个市场)
+2026-02-14 01:55:42 [[32mINFO[0m] CollectionOrchestrator: 
+2 秒后开始采集，按 Ctrl+C 可随时停止...
+2026-02-14 01:55:44 [[32mINFO[0m] CollectionOrchestrator: ======================================================================
+2026-02-14 01:55:44 [[32mINFO[0m] CollectionOrchestrator: 开始数据采集
+2026-02-14 01:55:44 [[32mINFO[0m] CollectionOrchestrator: 市场数: 12
+2026-02-14 01:55:44 [[32mINFO[0m] CollectionOrchestrator: 采集间隔: 180 秒
+2026-02-14 01:55:44 [[32mINFO[0m] CollectionOrchestrator: 逐笔成交采集: 已启用
+2026-02-14 01:55:44 [[32mINFO[0m] CollectionOrchestrator: 持续运行直到手动停止
+2026-02-14 01:55:44 [[32mINFO[0m] CollectionOrchestrator: ======================================================================
+2026-02-14 01:55:44 [[32mINFO[0m] CollectionOrchestrator: 
+--- 第 1 轮采集 ---
+2026-02-14 01:56:04 [[32mINFO[0m] CollectionOrchestrator: ✓ 成功采集并保存 12/12 个市场
+2026-02-14 01:56:04 [[32mINFO[0m] CollectionOrchestrator: 开始逐笔成交采集...
+2026-02-14 01:56:04 [[32mINFO[0m] TradeCollector: [1/12] 采集逐笔成交(YES): market=1308327
+2026-02-14 01:56:19 [[32mINFO[0m] TradeCollector: market=1308327 逐笔质量: 原始=3200, YES匹配=1541, 命中率=48.2%
+2026-02-14 01:56:19 [[32mINFO[0m] TradeCollector: [1/12] 完成(YES): market=1308327, 本轮抓取=1541 条, 耗时=14.9s
+2026-02-14 01:56:19 [[32mINFO[0m] TradeCollector: [2/12] 采集逐笔成交(YES): market=572473
+2026-02-14 01:56:35 [[32mINFO[0m] TradeCollector: market=572473 逐笔质量: 原始=3200, YES匹配=657, 命中率=20.5%
+2026-02-14 01:56:35 [[32mINFO[0m] TradeCollector: [2/12] 完成(YES): market=572473, 本轮抓取=657 条, 耗时=15.6s
+2026-02-14 01:56:35 [[32mINFO[0m] TradeCollector: [3/12] 采集逐笔成交(YES): market=1303357
+2026-02-14 01:56:39 [[32mINFO[0m] TradeCollector: market=1303357 逐笔质量: 原始=800, YES匹配=201, 命中率=25.1%
+2026-02-14 01:56:39 [[32mINFO[0m] TradeCollector: [3/12] 完成(YES): market=1303357, 本轮抓取=201 条, 耗时=4.6s
+2026-02-14 01:56:39 [[32mINFO[0m] TradeCollector: [4/12] 采集逐笔成交(YES): market=1273610
+2026-02-14 01:56:54 [[32mINFO[0m] TradeCollector: market=1273610 逐笔质量: 原始=3200, YES匹配=937, 命中率=29.3%
+2026-02-14 01:56:54 [[32mINFO[0m] TradeCollector: [4/12] 完成(YES): market=1273610, 本轮抓取=937 条, 耗时=15.0s
+2026-02-14 01:56:54 [[32mINFO[0m] TradeCollector: [5/12] 采集逐笔成交(YES): market=654412
+2026-02-14 01:57:09 [[32mINFO[0m] TradeCollector: market=654412 逐笔质量: 原始=3200, YES匹配=957, 命中率=29.9%
+2026-02-14 01:57:09 [[32mINFO[0m] TradeCollector: [5/12] 完成(YES): market=654412, 本轮抓取=957 条, 耗时=14.5s
+2026-02-14 01:57:09 [[32mINFO[0m] TradeCollector: [6/12] 采集逐笔成交(YES): market=654414
+2026-02-14 01:57:24 [[32mINFO[0m] TradeCollector: market=654414 逐笔质量: 原始=3200, YES匹配=2516, 命中率=78.6%
+2026-02-14 01:57:24 [[32mINFO[0m] TradeCollector: [6/12] 完成(YES): market=654414, 本轮抓取=2516 条, 耗时=15.0s
+2026-02-14 01:57:24 [[32mINFO[0m] TradeCollector: [7/12] 采集逐笔成交(YES): market=572469
+2026-02-14 01:57:43 [[32mINFO[0m] TradeCollector: market=572469 逐笔质量: 原始=3200, YES匹配=2523, 命中率=78.8%
+2026-02-14 01:57:43 [[32mINFO[0m] TradeCollector: [7/12] 完成(YES): market=572469, 本轮抓取=2523 条, 耗时=19.6s
+2026-02-14 01:57:43 [[32mINFO[0m] TradeCollector: [8/12] 采集逐笔成交(YES): market=1345822
+2026-02-14 01:58:04 [[32mINFO[0m] TradeCollector: market=1345822 逐笔质量: 原始=3200, YES匹配=1637, 命中率=51.2%
+2026-02-14 01:58:04 [[32mINFO[0m] TradeCollector: [8/12] 完成(YES): market=1345822, 本轮抓取=1637 条, 耗时=20.4s
+2026-02-14 01:58:04 [[32mINFO[0m] TradeCollector: [9/12] 采集逐笔成交(YES): market=1324216
+2026-02-14 01:58:27 [[32mINFO[0m] TradeCollector: market=1324216 逐笔质量: 原始=3200, YES匹配=1808, 命中率=56.5%
+2026-02-14 01:58:27 [[32mINFO[0m] TradeCollector: [9/12] 完成(YES): market=1324216, 本轮抓取=1808 条, 耗时=23.3s
+2026-02-14 01:58:27 [[32mINFO[0m] TradeCollector: [10/12] 采集逐笔成交(YES): market=561251
+2026-02-14 01:58:48 [[32mINFO[0m] TradeCollector: market=561251 逐笔质量: 原始=3200, YES匹配=825, 命中率=25.8%
+2026-02-14 01:58:48 [[32mINFO[0m] TradeCollector: [10/12] 完成(YES): market=561251, 本轮抓取=825 条, 耗时=21.2s
+2026-02-14 01:58:48 [[32mINFO[0m] TradeCollector: [11/12] 采集逐笔成交(YES): market=1345814
+2026-02-14 01:59:09 [[32mINFO[0m] TradeCollector: market=1345814 逐笔质量: 原始=3200, YES匹配=1513, 命中率=47.3%
+2026-02-14 01:59:09 [[32mINFO[0m] TradeCollector: [11/12] 完成(YES): market=1345814, 本轮抓取=1513 条, 耗时=20.4s
+2026-02-14 01:59:09 [[32mINFO[0m] TradeCollector: [12/12] 采集逐笔成交(YES): market=1364734
+2026-02-14 01:59:30 [[32mINFO[0m] TradeCollector: market=1364734 逐笔质量: 原始=3200, YES匹配=1773, 命中率=55.4%
+2026-02-14 01:59:30 [[32mINFO[0m] TradeCollector: [12/12] 完成(YES): market=1364734, 本轮抓取=1773 条, 耗时=21.4s
+2026-02-14 01:59:30 [[32mINFO[0m] TradeCollector: [1/12] 采集逐笔成交(NO): market=1308327
+2026-02-14 01:59:52 [[32mINFO[0m] TradeCollector: market=1308327 逐笔质量: 原始=3200, NO匹配=1637, 命中率=51.2%
+2026-02-14 01:59:52 [[32mINFO[0m] TradeCollector: [1/12] 完成(NO): market=1308327, 本轮抓取=1637 条, 耗时=21.8s
+2026-02-14 01:59:52 [[32mINFO[0m] TradeCollector: [2/12] 采集逐笔成交(NO): market=572473
+2026-02-14 02:00:13 [[32mINFO[0m] TradeCollector: market=572473 逐笔质量: 原始=3200, NO匹配=2539, 命中率=79.3%
+2026-02-14 02:00:13 [[32mINFO[0m] TradeCollector: [2/12] 完成(NO): market=572473, 本轮抓取=2539 条, 耗时=21.4s
+2026-02-14 02:00:13 [[32mINFO[0m] TradeCollector: [3/12] 采集逐笔成交(NO): market=1303357
+2026-02-14 02:00:29 [[32mINFO[0m] TradeCollector: market=1303357 逐笔质量: 原始=2265, NO匹配=1957, 命中率=86.4%
+2026-02-14 02:00:29 [[32mINFO[0m] TradeCollector: [3/12] 完成(NO): market=1303357, 本轮抓取=1957 条, 耗时=15.5s
+2026-02-14 02:00:29 [[32mINFO[0m] TradeCollector: [4/12] 采集逐笔成交(NO): market=1273610
+2026-02-14 02:00:53 [[32mINFO[0m] TradeCollector: market=1273610 逐笔质量: 原始=3200, NO匹配=2260, 命中率=70.6%
+2026-02-14 02:00:53 [[32mINFO[0m] TradeCollector: [4/12] 完成(NO): market=1273610, 本轮抓取=2260 条, 耗时=24.4s
+2026-02-14 02:00:53 [[32mINFO[0m] TradeCollector: [5/12] 采集逐笔成交(NO): market=654412
+2026-02-14 02:01:19 [[32mINFO[0m] TradeCollector: market=654412 逐笔质量: 原始=3200, NO匹配=2246, 命中率=70.2%
+2026-02-14 02:01:19 [[32mINFO[0m] TradeCollector: [5/12] 完成(NO): market=654412, 本轮抓取=2246 条, 耗时=25.5s
+2026-02-14 02:01:19 [[32mINFO[0m] TradeCollector: [6/12] 采集逐笔成交(NO): market=654414
+2026-02-14 02:01:41 [[32mINFO[0m] TradeCollector: market=654414 逐笔质量: 原始=3200, NO匹配=684, 命中率=21.4%
+2026-02-14 02:01:41 [[32mINFO[0m] TradeCollector: [6/12] 完成(NO): market=654414, 本轮抓取=684 条, 耗时=21.7s
+2026-02-14 02:01:41 [[32mINFO[0m] TradeCollector: [7/12] 采集逐笔成交(NO): market=572469
+2026-02-14 02:01:59 [[32mINFO[0m] TradeCollector: market=572469 逐笔质量: 原始=3200, NO匹配=678, 命中率=21.2%
+2026-02-14 02:01:59 [[32mINFO[0m] TradeCollector: [7/12] 完成(NO): market=572469, 本轮抓取=678 条, 耗时=18.1s
+2026-02-14 02:01:59 [[32mINFO[0m] TradeCollector: [8/12] 采集逐笔成交(NO): market=1345822
+2026-02-14 02:02:14 [[32mINFO[0m] TradeCollector: market=1345822 逐笔质量: 原始=3200, NO匹配=1563, 命中率=48.8%
+2026-02-14 02:02:14 [[32mINFO[0m] TradeCollector: [8/12] 完成(NO): market=1345822, 本轮抓取=1563 条, 耗时=15.5s
+2026-02-14 02:02:14 [[32mINFO[0m] TradeCollector: [9/12] 采集逐笔成交(NO): market=1324216
+2026-02-14 02:02:30 [[32mINFO[0m] TradeCollector: market=1324216 逐笔质量: 原始=3200, NO匹配=1392, 命中率=43.5%
+2026-02-14 02:02:30 [[32mINFO[0m] TradeCollector: [9/12] 完成(NO): market=1324216, 本轮抓取=1392 条, 耗时=15.9s
+2026-02-14 02:02:30 [[32mINFO[0m] TradeCollector: [10/12] 采集逐笔成交(NO): market=561251
+2026-02-14 02:02:46 [[32mINFO[0m] TradeCollector: market=561251 逐笔质量: 原始=3200, NO匹配=2375, 命中率=74.2%
+2026-02-14 02:02:46 [[32mINFO[0m] TradeCollector: [10/12] 完成(NO): market=561251, 本轮抓取=2375 条, 耗时=16.1s
+2026-02-14 02:02:46 [[32mINFO[0m] TradeCollector: [11/12] 采集逐笔成交(NO): market=1345814
+2026-02-14 02:03:00 [[32mINFO[0m] TradeCollector: market=1345814 逐笔质量: 原始=3200, NO匹配=1687, 命中率=52.7%
+2026-02-14 02:03:00 [[32mINFO[0m] TradeCollector: [11/12] 完成(NO): market=1345814, 本轮抓取=1687 条, 耗时=14.3s
+2026-02-14 02:03:00 [[32mINFO[0m] TradeCollector: [12/12] 采集逐笔成交(NO): market=1364734
+2026-02-14 02:03:15 [[32mINFO[0m] TradeCollector: market=1364734 逐笔质量: 原始=3200, NO匹配=1427, 命中率=44.6%
+2026-02-14 02:03:15 [[32mINFO[0m] TradeCollector: [12/12] 完成(NO): market=1364734, 本轮抓取=1427 条, 耗时=14.7s
+2026-02-14 02:03:16 [[32mINFO[0m] CollectionOrchestrator: ✓ 逐笔成交 YES 抓取 16888 条，实际新增 16888 条
+2026-02-14 02:03:16 [[32mINFO[0m] CollectionOrchestrator: ✓ 逐笔成交 NO 抓取 20445 条，实际新增 20445 条
+2026-02-14 02:03:16 [[32mINFO[0m] CollectionOrchestrator: 
+--- 第 2 轮采集 ---
+2026-02-14 02:03:20 [[32mINFO[0m] CollectionOrchestrator: 
+收到退出信号，正在优雅关闭...
+2026-02-14 02:03:28 [[32mINFO[0m] CollectionOrchestrator: 
+收到退出信号，正在优雅关闭...
+2026-02-14 02:03:35 [[32mINFO[0m] CollectionOrchestrator: ✓ 成功采集并保存 12/12 个市场
+2026-02-14 02:03:35 [[32mINFO[0m] CollectionOrchestrator: 开始逐笔成交采集...
+2026-02-14 02:03:35 [[32mINFO[0m] TradeCollector: [1/12] 采集逐笔成交(YES): market=1308327
+2026-02-14 02:03:36 [[32mINFO[0m] TradeCollector: market=1308327 逐笔质量: 原始=200, YES匹配=88, 命中率=44.0%
+2026-02-14 02:03:36 [[32mINFO[0m] TradeCollector: [1/12] 完成(YES): market=1308327, 本轮抓取=12 条, 耗时=1.0s
+2026-02-14 02:03:36 [[32mINFO[0m] TradeCollector: [2/12] 采集逐笔成交(YES): market=572473
+2026-02-14 02:03:37 [[32mINFO[0m] TradeCollector: market=572473 逐笔质量: 原始=200, YES匹配=95, 命中率=47.5%
+2026-02-14 02:03:37 [[32mINFO[0m] TradeCollector: [2/12] 完成(YES): market=572473, 本轮抓取=5 条, 耗时=0.8s
+2026-02-14 02:03:37 [[32mINFO[0m] TradeCollector: [3/12] 采集逐笔成交(YES): market=1303357
+2026-02-14 02:03:38 [[32mINFO[0m] TradeCollector: market=1303357 逐笔质量: 原始=200, YES匹配=122, 命中率=61.0%
+2026-02-14 02:03:38 [[32mINFO[0m] TradeCollector: [3/12] 完成(YES): market=1303357, 本轮抓取=0 条, 耗时=1.0s
+2026-02-14 02:03:38 [[32mINFO[0m] TradeCollector: [4/12] 采集逐笔成交(YES): market=1273610
+2026-02-14 02:03:39 [[32mINFO[0m] TradeCollector: market=1273610 逐笔质量: 原始=200, YES匹配=48, 命中率=24.0%
+2026-02-14 02:03:39 [[32mINFO[0m] TradeCollector: [4/12] 完成(YES): market=1273610, 本轮抓取=4 条, 耗时=0.9s
+2026-02-14 02:03:39 [[32mINFO[0m] TradeCollector: [5/12] 采集逐笔成交(YES): market=654412
+2026-02-14 02:03:40 [[32mINFO[0m] TradeCollector: market=654412 逐笔质量: 原始=200, YES匹配=58, 命中率=29.0%
+2026-02-14 02:03:40 [[32mINFO[0m] TradeCollector: [5/12] 完成(YES): market=654412, 本轮抓取=3 条, 耗时=1.0s
+2026-02-14 02:03:40 [[32mINFO[0m] TradeCollector: [6/12] 采集逐笔成交(YES): market=654414
+2026-02-14 02:03:41 [[32mINFO[0m] TradeCollector: market=654414 逐笔质量: 原始=200, YES匹配=143, 命中率=71.5%
+2026-02-14 02:03:41 [[32mINFO[0m] TradeCollector: [6/12] 完成(YES): market=654414, 本轮抓取=3 条, 耗时=0.9s
+2026-02-14 02:03:41 [[32mINFO[0m] TradeCollector: [7/12] 采集逐笔成交(YES): market=572469
+2026-02-14 02:03:42 [[32mINFO[0m] TradeCollector: market=572469 逐笔质量: 原始=200, YES匹配=82, 命中率=41.0%
+2026-02-14 02:03:42 [[32mINFO[0m] TradeCollector: [7/12] 完成(YES): market=572469, 本轮抓取=8 条, 耗时=0.9s
+2026-02-14 02:03:42 [[32mINFO[0m] TradeCollector: [8/12] 采集逐笔成交(YES): market=1345822
+2026-02-14 02:03:43 [[32mINFO[0m] TradeCollector: market=1345822 逐笔质量: 原始=200, YES匹配=126, 命中率=63.0%
+2026-02-14 02:03:43 [[32mINFO[0m] TradeCollector: [8/12] 完成(YES): market=1345822, 本轮抓取=1 条, 耗时=1.6s
+2026-02-14 02:03:43 [[32mINFO[0m] TradeCollector: [9/12] 采集逐笔成交(YES): market=1324216
+2026-02-14 02:03:44 [[32mINFO[0m] TradeCollector: market=1324216 逐笔质量: 原始=200, YES匹配=66, 命中率=33.0%
+2026-02-14 02:03:44 [[32mINFO[0m] TradeCollector: [9/12] 完成(YES): market=1324216, 本轮抓取=0 条, 耗时=1.2s
+2026-02-14 02:03:44 [[32mINFO[0m] TradeCollector: [10/12] 采集逐笔成交(YES): market=561251
+2026-02-14 02:03:46 [[32mINFO[0m] TradeCollector: market=561251 逐笔质量: 原始=200, YES匹配=27, 命中率=13.5%
+2026-02-14 02:03:46 [[32mINFO[0m] TradeCollector: [10/12] 完成(YES): market=561251, 本轮抓取=0 条, 耗时=1.3s
+2026-02-14 02:03:46 [[32mINFO[0m] TradeCollector: [11/12] 采集逐笔成交(YES): market=1345814
+2026-02-14 02:03:47 [[32mINFO[0m] TradeCollector: market=1345814 逐笔质量: 原始=200, YES匹配=126, 命中率=63.0%
+2026-02-14 02:03:47 [[32mINFO[0m] TradeCollector: [11/12] 完成(YES): market=1345814, 本轮抓取=0 条, 耗时=0.9s
+2026-02-14 02:03:47 [[32mINFO[0m] TradeCollector: [12/12] 采集逐笔成交(YES): market=1364734
+2026-02-14 02:03:47 [[32mINFO[0m] TradeCollector: market=1364734 逐笔质量: 原始=200, YES匹配=133, 命中率=66.5%
+2026-02-14 02:03:47 [[32mINFO[0m] TradeCollector: [12/12] 完成(YES): market=1364734, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:47 [[32mINFO[0m] TradeCollector: [1/12] 采集逐笔成交(NO): market=1308327
+2026-02-14 02:03:48 [[32mINFO[0m] TradeCollector: market=1308327 逐笔质量: 原始=200, NO匹配=112, 命中率=56.0%
+2026-02-14 02:03:48 [[32mINFO[0m] TradeCollector: [1/12] 完成(NO): market=1308327, 本轮抓取=29 条, 耗时=0.9s
+2026-02-14 02:03:48 [[32mINFO[0m] TradeCollector: [2/12] 采集逐笔成交(NO): market=572473
+2026-02-14 02:03:49 [[32mINFO[0m] TradeCollector: market=572473 逐笔质量: 原始=200, NO匹配=105, 命中率=52.5%
+2026-02-14 02:03:49 [[32mINFO[0m] TradeCollector: [2/12] 完成(NO): market=572473, 本轮抓取=0 条, 耗时=0.9s
+2026-02-14 02:03:49 [[32mINFO[0m] TradeCollector: [3/12] 采集逐笔成交(NO): market=1303357
+2026-02-14 02:03:50 [[32mINFO[0m] TradeCollector: market=1303357 逐笔质量: 原始=200, NO匹配=78, 命中率=39.0%
+2026-02-14 02:03:50 [[32mINFO[0m] TradeCollector: [3/12] 完成(NO): market=1303357, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:50 [[32mINFO[0m] TradeCollector: [4/12] 采集逐笔成交(NO): market=1273610
+2026-02-14 02:03:51 [[32mINFO[0m] TradeCollector: market=1273610 逐笔质量: 原始=200, NO匹配=152, 命中率=76.0%
+2026-02-14 02:03:51 [[32mINFO[0m] TradeCollector: [4/12] 完成(NO): market=1273610, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:51 [[32mINFO[0m] TradeCollector: [5/12] 采集逐笔成交(NO): market=654412
+2026-02-14 02:03:52 [[32mINFO[0m] TradeCollector: market=654412 逐笔质量: 原始=200, NO匹配=142, 命中率=71.0%
+2026-02-14 02:03:52 [[32mINFO[0m] TradeCollector: [5/12] 完成(NO): market=654412, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:52 [[32mINFO[0m] TradeCollector: [6/12] 采集逐笔成交(NO): market=654414
+2026-02-14 02:03:52 [[32mINFO[0m] TradeCollector: market=654414 逐笔质量: 原始=200, NO匹配=57, 命中率=28.5%
+2026-02-14 02:03:52 [[32mINFO[0m] TradeCollector: [6/12] 完成(NO): market=654414, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:52 [[32mINFO[0m] TradeCollector: [7/12] 采集逐笔成交(NO): market=572469
+2026-02-14 02:03:53 [[32mINFO[0m] TradeCollector: market=572469 逐笔质量: 原始=200, NO匹配=118, 命中率=59.0%
+2026-02-14 02:03:53 [[32mINFO[0m] TradeCollector: [7/12] 完成(NO): market=572469, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:53 [[32mINFO[0m] TradeCollector: [8/12] 采集逐笔成交(NO): market=1345822
+2026-02-14 02:03:54 [[32mINFO[0m] TradeCollector: market=1345822 逐笔质量: 原始=200, NO匹配=74, 命中率=37.0%
+2026-02-14 02:03:54 [[32mINFO[0m] TradeCollector: [8/12] 完成(NO): market=1345822, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:54 [[32mINFO[0m] TradeCollector: [9/12] 采集逐笔成交(NO): market=1324216
+2026-02-14 02:03:55 [[32mINFO[0m] TradeCollector: market=1324216 逐笔质量: 原始=200, NO匹配=134, 命中率=67.0%
+2026-02-14 02:03:55 [[32mINFO[0m] TradeCollector: [9/12] 完成(NO): market=1324216, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:55 [[32mINFO[0m] TradeCollector: [10/12] 采集逐笔成交(NO): market=561251
+2026-02-14 02:03:56 [[32mINFO[0m] TradeCollector: market=561251 逐笔质量: 原始=200, NO匹配=173, 命中率=86.5%
+2026-02-14 02:03:56 [[32mINFO[0m] TradeCollector: [10/12] 完成(NO): market=561251, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:56 [[32mINFO[0m] TradeCollector: [11/12] 采集逐笔成交(NO): market=1345814
+2026-02-14 02:03:57 [[32mINFO[0m] TradeCollector: market=1345814 逐笔质量: 原始=200, NO匹配=74, 命中率=37.0%
+2026-02-14 02:03:57 [[32mINFO[0m] TradeCollector: [11/12] 完成(NO): market=1345814, 本轮抓取=0 条, 耗时=1.4s
+2026-02-14 02:03:57 [[32mINFO[0m] TradeCollector: [12/12] 采集逐笔成交(NO): market=1364734
+2026-02-14 02:03:58 [[32mINFO[0m] TradeCollector: market=1364734 逐笔质量: 原始=200, NO匹配=67, 命中率=33.5%
+2026-02-14 02:03:58 [[32mINFO[0m] TradeCollector: [12/12] 完成(NO): market=1364734, 本轮抓取=0 条, 耗时=0.8s
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator: ✓ 逐笔成交 YES 抓取 36 条，实际新增 36 条
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator: ✓ 逐笔成交 NO 抓取 29 条，实际新增 29 条
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator: 
+======================================================================
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator: 数据采集已停止
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator: 总运行时间: 0.14 小时
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator: 完成轮次: 2
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator: ======================================================================
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: ============================================================
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: 数据采集统计
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: ============================================================
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: 元数据文件: polymarket_data/market_metadata.csv
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: 时序文件数: 12
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: 总记录数: 24
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: 逐笔成交文件数: 24
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: 逐笔成交总记录数: 37398
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: 
+各市场记录数：
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 654414_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 572473_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 1308327_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 1364734_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 1345822_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 572469_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 1345814_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 1324216_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 561251_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 1303357_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 654412_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager:   - 1273610_YES.csv: 2 条
+2026-02-14 02:03:58 [[32mINFO[0m] StorageManager: ============================================================
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator: 
+数据文件位置:
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator:   元数据: polymarket_data/market_metadata.csv
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator:   时序数据: polymarket_data/timeseries
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator:   逐笔成交: polymarket_data/trades
+2026-02-14 02:03:58 [[32mINFO[0m] CollectionOrchestrator:   日志: polymarket_data/logs/collection.log
